@@ -25,7 +25,7 @@ Fonts:
 
 /* Set up the main font and background color for the whole page */
 body {
-  background-color: #f4f8fb; /* Soft light blue for a fresh look */
+  background-color: #8BD1CB;
   font-family: 'Avenir', 'Proxima Nova', Arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -195,4 +195,260 @@ section {
   .impact-image {
     width: 300px;
   }
+}
+
+/* Header Bar */
+.cw-header {
+  width: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 18px 6px 0;
+  border-bottom: 1px solid #e0e0e0;
+  position: relative;
+  z-index: 10;
+}
+.cw-logo {
+  font-family: 'Avenir', 'Proxima Nova', Arial, sans-serif;
+  font-size: 1.2em;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #222;
+  margin-left: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.cw-logo-img {
+  height: 30px;
+  width: auto;
+  margin-right: 9px;
+  vertical-align: middle;
+}
+.cw-header-buttons {
+  display: flex;
+  gap: 8px;
+}
+.cw-header-btn {
+  background: #FFC907;
+  color: #222;
+  border: none;
+  border-radius: 16px;
+  padding: 4px 18px;
+  font-weight: 600;
+  font-size: 0.98em;
+  cursor: pointer;
+  margin-top: 2px;
+  transition: background 0.2s;
+}
+.cw-header-btn:hover {
+  background: #FFD94D;
+}
+
+/* Main Hero Section */
+.cw-hero-main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  background: transparent;
+  min-height: 90vh;
+  padding: 0;
+  gap: 0;
+  position: relative;
+}
+.cw-hero-left {
+  max-width: 480px;
+  margin-left: 6vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 60px;
+  height: auto;
+  min-height: unset;
+  position: relative;
+  gap: 24px;
+}
+.cw-hero-title {
+  width: 100%;
+  text-align: left;
+  font-family: 'Anton', Arial, sans-serif;
+  font-size: 2.8em;
+  font-weight: 900;
+  margin: 0 0 18px 0;
+  color: #222;
+  line-height: 1.1;
+  align-self: flex-start;
+  letter-spacing: 1px;
+}
+.cw-hero-desc {
+  font-family: 'Georgia Pro', Georgia, serif;
+  font-size: 1.35em;
+  margin: 0 0 12px 32px;
+  color: #222;
+  font-weight: 500;
+  line-height: 1.4;
+  align-self: flex-start;
+  max-width: 600px;
+}
+.cw-story-text {
+  background: rgba(119, 168, 187, 0.18);
+  color: #222;
+  font-size: 1.15em;
+  font-family: 'Quicksand', Arial, sans-serif;
+  border-radius: 14px;
+  padding: 14px 24px;
+  box-shadow: 0 2px 12px rgba(46, 157, 247, 0.10);
+  margin-bottom: 12px;
+  margin-left: 0;
+  margin-right: 0;
+}
+.cw-donate-btn {
+  background: #FFC907;
+  color: #222;
+  border: none;
+  border-radius: 18px;
+  padding: 12px 36px;
+  font-weight: 700;
+  font-size: 1.18em;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(46, 157, 247, 0.10);
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  margin-bottom: 12px;
+  align-self: center;
+  margin-left: 60px;
+  margin-top: 0;
+  position: static;
+}
+.cw-donate-btn:hover, .cw-donate-btn:focus {
+  background: #FFD94D;
+  transform: translateY(-2px) scale(1.04);
+  outline: none;
+}
+.cw-hero-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 8vw;
+  flex: 1;
+}
+.cw-image-circle-container {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #77a8bb;
+  box-shadow: 0 4px 24px rgba(46, 157, 247, 0.13);
+}
+.cw-hero-img-circle {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  border: 6px solid #fff;
+}
+.cw-watercan-overlay {
+  position: absolute;
+  right: 44px;
+  bottom: 60px;
+  width: 70px;
+  height: auto;
+  opacity: 0.92;
+  filter: drop-shadow(0 2px 8px rgba(46, 157, 247, 0.18));
+  pointer-events: none;
+}
+.cw-hero-story {
+  position: absolute;
+  top: 48px;
+  left: 7vw;
+  max-width: 440px;
+  z-index: 2;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .cw-hero-main {
+    flex-direction: column;
+    min-height: unset;
+    padding: 32px 0 0 0;
+    gap: 24px;
+  }
+  .cw-hero-left, .cw-hero-right {
+    margin: 0;
+    align-items: center;
+    text-align: center;
+  }
+  .cw-hero-left {
+    align-items: center;
+  }
+}
+
+/* Remove old section styles for clarity */
+.hero, .story, .impact-story, .call-to-action {
+  display: none !important;
+}
+
+.cw-signup-section {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 16px rgba(46, 157, 247, 0.10);
+  max-width: 480px;
+  margin: 48px auto 32px auto;
+  padding: 32px 28px 28px 28px;
+  text-align: center;
+}
+.cw-signup-title {
+  color: #8BD1CB;
+  font-family: 'Anton', Arial, sans-serif;
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+.cw-signup-desc {
+  color: #222;
+  font-family: 'Quicksand', Arial, sans-serif;
+  font-size: 1.1em;
+  margin-bottom: 22px;
+}
+.cw-signup-form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 0;
+}
+.cw-signup-input {
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid #77a8bb;
+  font-size: 1em;
+  font-family: 'Quicksand', Arial, sans-serif;
+  outline: none;
+  width: 60%;
+  transition: border 0.2s;
+}
+.cw-signup-input:focus {
+  border: 1.5px solid #2E9DF7;
+}
+.cw-signup-btn {
+  background: #FFC907;
+  color: #222;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-weight: 700;
+  font-size: 1em;
+  font-family: 'Quicksand', Arial, sans-serif;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+.cw-signup-btn:hover, .cw-signup-btn:focus {
+  background: #FFD94D;
+  transform: translateY(-2px) scale(1.04);
+  outline: none;
 }

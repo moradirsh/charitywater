@@ -5,43 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Charity Water Landing Page</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts for Anton -->
+    <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
+    <!-- Google Fonts for Quicksand -->
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Hero Section: This is the main banner at the top of the page -->
-    <section class="hero">
-        <!-- Main headline -->
-        <h1>Clean Water for Everyone</h1>
-        <!-- Subheadline -->
-        <p>Join us in bringing safe, clean water to communities in need.</p>
-    </section>
-
-    <!-- Story Section: This tells the story of the nonprofit -->
-    <section class="story">
-        <h2>Our Story</h2>
-        <p>
-         
-    </section>
-
-    <!-- Real-World Impact Story Section -->
-    <section class="impact-story">
-        <!-- Section headline -->
-        <h2>Real Impact: Meet Amina</h2>
-        <!-- Container for image and text -->
-        <div class="impact-content">
-            <!-- Impact image -->
-            <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80" alt="Amina smiling with clean water" class="impact-image">
-            <!-- Impact story text -->
-            <p>
-                Amina used to walk miles every day to collect water for her family. Thanks to your support, her village now has a clean water well. Amina can go to school and her family is healthier and happier.
-            </p>
+    <!-- Header Bar -->
+    <header class="cw-header">
+        <div class="cw-logo"><img src="img/cw_logo-2.png" alt="Charity Water Logo" class="cw-logo-img"></div>
+        <div class="cw-header-buttons">
+            <button class="cw-header-btn">FAQ</button>
+            <button class="cw-header-btn">Our Purpose</button>
         </div>
-    </section>
-
-    <!-- Call-to-Action Section: This encourages visitors to take action -->
-    <section class="call-to-action">
-        <h2>Make a Difference</h2>
-        <p>Your support can help save lives. Every donation brings us closer to a world with clean water for all.</p>
-        <a href="#" class="donate-button">Donate Now</a>
-    </section>
+    </header>
+    <!-- Main Hero Section -->
+    <main class="cw-hero-main">
+        <div class="cw-hero-left">
+            <h1 class="cw-hero-title">Changing the World: One Drop at a Time</h1>
+            <p class="cw-hero-desc">Join our movement to fight the ongoing water crisis. With your voice, donations, and impact, we can fuel real change in communities around the world.</p>
+            <p class="cw-story-text">We spoke with this young boy about how access to clean water has changed his life. Now, he and his family are healthier, happier, and have hope for a brighter future.</p>
+            <button class="cw-donate-btn">Donate Now!</button>
+            <div class="cw-signup-section">
+                <h2 class="cw-signup-title">Stay Inspired!</h2>
+                <p class="cw-signup-desc">Get stories of hope and progress delivered to your inbox.</p>
+                <form class="cw-signup-form" autocomplete="off">
+                    <input type="email" class="cw-signup-input" placeholder="Your email address" required>
+                    <button type="submit" class="cw-signup-btn">Sign Up</button>
+                </form>
+            </div>
+        </div>
+        <div class="cw-hero-right">
+            <div class="cw-image-circle-container">
+                <img src="img/CHARITYwater.png" alt="Smiling child with water" class="cw-hero-img-circle">
+                <img src="img/water-can-transparent.png" alt="Water can logo" class="cw-watercan-overlay">
+            </div>
+        </div>
+    </main>
+    <script>
+      // Show a success message when the sign up form is submitted
+      document.addEventListener('DOMContentLoaded', function() {
+        var form = document.querySelector('.cw-signup-form');
+        if(form) {
+          form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            var input = form.querySelector('.cw-signup-input');
+            if(input.value.trim() !== '') {
+              form.style.display = 'none';
+              var msg = document.createElement('div');
+              msg.className = 'cw-signup-success';
+              msg.textContent = "Thank you for signing up! You'll receive updates soon.";
+              form.parentNode.appendChild(msg);
+            }
+          });
+        }
+      });
+    </script>
 </body>
 </html>
